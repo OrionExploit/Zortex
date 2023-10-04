@@ -1,0 +1,127 @@
+local player = game.Players.LocalPlayer 
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Zortex Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+local Section = Tab:AddSection({
+	Name = "Main"
+})
+
+
+OrionLib:MakeNotification({
+	Name = "Welcome",
+	Content = "have fun!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+
+Tab:AddButton({
+	Name = "Slap Battles(Ks and Sr)",
+	Callback = function()
+      		loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "İnfinite Yield",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Fly Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Baller Farm",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/BallerFarm.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tab Gltich (If someone hits you, freeze yourself)",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/thanhdat4461/BaconScripterLua/main/Freeze%20Character%20%2B%20Gravity.lua"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Fling",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Brazil Kick(Need Recall)",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://pastefy.app/LbJTfP4j/raw'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Auto Hit Eternel Bob",
+	Callback = function()
+      		loadstring(game:HttpGet(('https://pastefy.app/6uYq8dXr/raw'),true))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tp Tool",
+	Callback = function()
+      		mouse = game.Players.LocalPlayer:GetMouse()
+tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+tool.Activated:connect(function()
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+end)
+tool.Parent = game.Players.LocalPlayer.Backpack
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Hitbox V1 (V2 Coming Soon)",
+	Callback = function()
+      		loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "No cooldown(all gloves)",
+	Callback = function()
+      		local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local tool = character:FindFirstChildOfClass("Tool") or player.Backpack:FindFirstChildOfClass("Tool")
+ 
+while character.Humanoid.Health ~= 0 do
+local localscript = tool:FindFirstChildOfClass("LocalScript")
+local localscriptclone = localscript:Clone()
+localscriptclone = localscript:Clone()
+localscriptclone:Clone()
+localscript:Destroy()
+localscriptclone.Parent = tool
+wait(0.1)
+      end
+  	end    
+})
