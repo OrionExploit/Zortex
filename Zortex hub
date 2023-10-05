@@ -101,14 +101,14 @@ tool.Parent = game.Players.LocalPlayer.Backpack
 })
 
 Tab:AddButton({
-	Name = "Hitbox V1 (V2 Coming Soon)",
+	Name = "Hitbox V1",
 	Callback = function()
       		loadstring(game:HttpGet(("https://gist.githubusercontent.com/stellar-4242/430ef3087d8d87eb306ca03e728ffbb8/raw/798429dd908b1f4471a1fa569ff62c5e5a93ec61/SLAP.LUA")))()
   	end    
 })
 
 Tab:AddButton({
-	Name = "No cooldown(all gloves)",
+	Name = "No Cooldown(use in arena)",
 	Callback = function()
       		local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
